@@ -67,7 +67,7 @@
         <div class="text-center">
             <p class="text-sm text-gray-600">
                 還沒有帳號？
-                <a href="{{ route('register') }}" class="text-blue-600 hover:text-blue-500">
+                <a href="{{ route('member.register') }}" class="text-blue-600 hover:text-blue-500">
                     立即註冊
                 </a>
             </p>

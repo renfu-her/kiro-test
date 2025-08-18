@@ -30,7 +30,7 @@
                         <a href="{{ route('invitations.index') }}" class="text-gray-700 hover:text-gray-900 relative">
                             邀請
                             @php
-                                $pendingCount = Auth::user()->receivedInvitations()->where('status', 'pending')->count();
+                                $pendingCount = Auth::guard('member')->user()->receivedInvitations()->where('status', 'pending')->count();
                             @endphp
                             @if($pendingCount > 0)
                                 <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -39,7 +39,7 @@
                             @endif
                         </a>
                         <span class="text-gray-700">{{ Auth::guard('member')->user()->name }}</span>
-                        <form method="POST" action="{{ route('logout') }}" class="inline">
+                        <form method="POST" action="{{ route('member.logout') }}" class="inline">
                             @csrf
                             <button type="submit" class="text-gray-500 hover:text-gray-700">
                                 登出

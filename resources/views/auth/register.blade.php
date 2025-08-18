@@ -81,7 +81,7 @@
         <div class="text-center">
             <p class="text-sm text-gray-600">
                 已有帳號？
-                <a href="{{ route('login') }}" class="text-blue-600 hover:text-blue-500">
+                <a href="{{ route('member.login') }}" class="text-blue-600 hover:text-blue-500">
                     立即登入
                 </a>
             </p>
