@@ -53,8 +53,8 @@ class MemberSeeder extends Seeder
             if (!$todo->memberCollaborators->contains($invitee)) {
                 TodoInvitation::create([
                     'todo_id' => $todo->id,
-                    'inviter_id' => $todo->member_id,
-                    'invitee_id' => $invitee->id,
+                    'inviter_id' => null, // Set to null since we're using member IDs
+                    'invitee_id' => null,  // Set to null since we're using member IDs
                     'inviter_member_id' => $todo->member_id,
                     'invitee_member_id' => $invitee->id,
                     'status' => collect(['pending', 'accepted', 'rejected'])->random(),
